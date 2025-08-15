@@ -1,0 +1,13 @@
+import { promises } from "dns"
+import { Connection } from "mongoose"
+
+
+
+declare global { 
+    var mongoose:{
+        conn:Connection | null
+        promise: Promises<Connection> | null 
+    }
+}
+
+export {}
